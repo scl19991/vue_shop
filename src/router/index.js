@@ -5,13 +5,24 @@ Vue.use(VueRouter)
 
 //懒加载
 const Login = () =>
-  import ('../components/Login')
+  import ('components/Login')
 const Home = () =>
-  import ('../views/Home')
+  import ('views/home/Home')
+const Welcome = () =>
+  import ('components/Welcome')
+const Users = () =>
+  import ('components/user/Users')
 const routes = [
   { path: '', redirect: '/login' },
   { path: '/login', component: Login },
-  { path: '/home', component: Home }
+  {
+    path: '/home',
+    component: Home,
+    redirect: '/welcome',
+    children: [{ path: '/welcome', component: Welcome },
+      { path: '/users', component: Users }
+    ]
+  }
 ]
 
 const router = new VueRouter({
