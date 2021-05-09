@@ -41,6 +41,7 @@ export default {
       const {data: res} = await this.$http.get('menus')
       if(res.meta.status != 200) return this.$message.error(res.meta.msg)
       console.log(res.data);
+      //把左侧对应的menulist传入HomeAside组件中（后续有路由跳转）
       this.menulist = res.data;
     },
     changeWidth(isCollapse){
