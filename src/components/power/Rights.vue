@@ -2,10 +2,10 @@
   <div>
     <!-- 面包屑导航 -->
     <el-breadcrumb separator="/">
-    <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-    <el-breadcrumb-item>权限管理</el-breadcrumb-item>
-    <el-breadcrumb-item>权限列表</el-breadcrumb-item>
-  </el-breadcrumb>
+      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>权限管理</el-breadcrumb-item>
+      <el-breadcrumb-item>权限列表</el-breadcrumb-item>
+    </el-breadcrumb>
 
     <!-- 卡片视图 -->
     <el-card>
@@ -49,11 +49,4 @@ export default {
 </script>
 
 <style scoped>
-.el-breadcrumb{
-  margin-bottom: 15px;
-  font-size: 12px;
-}
-.el-card{
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .15) !important; 
-}
 </style>
